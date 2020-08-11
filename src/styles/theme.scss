@@ -1,0 +1,114 @@
+@font-face {
+  font-display: fallback;
+  font-family: "Lato";
+  src: url("../fonts/Lato-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Lato-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Lato-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/Lato-regular.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("../fonts/Lato-regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/Lato-regular.svg") format("svg"); /* Legacy iOS */
+}
+
+$theme-colors: (
+    primary: #9c3,
+);
+@import "bootstrap";
+@include media-breakpoint-down(md) {
+    nav.top_level {
+        text-align: center !important;
+    }
+}
+.navbar-brand img {
+    height: 35px !important;
+}
+html {
+  min-height: 100vh;
+  padding-bottom: 120px;
+  position: relative;
+  overflow-x: hidden !important;
+}
+body{
+    padding-right:0px !important;
+    font-family: "Lato", serif !important;
+}
+.fullPageHeader {
+  height: 100vh !important;
+    top: 0;
+    z-index: -1;
+}
+.navbar-toggler {
+  border: none !important;
+}
+.desktopDrawer {
+    position: relative;
+    @include media-breakpoint-down(md){
+        position: absolute;
+    }
+     .MuiDrawer-paper {
+        position: relative;
+        width: 330px;
+        overflow-x: hidden;
+        height: 70vh;
+        padding: 15px;
+        @include media-breakpoint-down(md){
+            -webkit-box-shadow: 14px 18px 31px -15px rgba(0,0,0,0.75);
+            -moz-box-shadow: 14px 18px 31px -15px rgba(0,0,0,0.75);
+            box-shadow: 14px 18px 31px -15px rgba(0,0,0,0.75);
+        }
+    }
+}
+
+.contentPage.jumbotron {
+    padding: 0;
+    background-color: #fff;
+    height: auto;
+    border-bottom: 5px dotted #eee;
+    img {
+        height: 100px;
+        position: relative;
+        object-position: 0 0;
+    }
+    h1 {
+        padding: 20px 0px;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+/* Toastify*/
+.Toastify__toast-container {
+    width: 320px !important;
+}
+.Toastify__toast--default {
+    background: #fff !important;
+    color: #aaa !important;
+}
+.Toastify__toast--info {
+    background: #3498db !important;
+}
+.Toastify__toast--success {
+    color: #000;
+    background: #9c3 !important;
+    background: -webkit-linear-gradient(left, #9c3, #eee) !important;
+    background: linear-gradient(to right, #9c3, #eee) !important;
+}
+.Toastify__toast--warning {
+    background: #f1c40f !important;
+}
+.Toastify__toast--error {
+    background: #e74c3c !important;
+    background: -webkit-linear-gradient(left, #ff0101, #952626) !important;
+    background: linear-gradient(to right, #ff0101, #952626) !important;
+}
+.clear_search.input-group-append {
+    position: absolute;
+    right: 40px;
+   z-index:99999;
+}
+.clear_search.input-group-append .btn {
+  background-color: transparent;
+  color:black;
+  border:none;
+}
