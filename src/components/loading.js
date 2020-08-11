@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/minimal.scss"
 
 export function Loading() {
   return (
